@@ -1,54 +1,194 @@
 * {
-    padding: 5px;
-    margin: 5px;
-    background: #0b0b0c;
-    color: #f5f5f7;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    line-height: 1.5;
-  }
-  
+  padding: 5px;
+  margin: 5px;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0b0b0c;
+  color: #f5f5f7;
+  margin: 0;
+  padding: 0;
+}
+
+#logo {
+  width: 18%;
+  display: block;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  padding: 8px 0;
+  background: #0b0b0c;
+}
+
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background: transparent;
+}
+
+nav a:hover {
+  border-color: #4d5c3b;
+}
+
+#navselected {
+  color: #92ad70;
+  background: transparent;
+}
+
+.cta,
+a.cta {
+  display: inline-block;
+  background-color: #92ad70;
+  color: #0b0b0c;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.cta:hover,
+a.cta:hover {
+  background-color: #a8c282;
+  border-color: transparent;
+}
+
+footer {
+  border-top: 1px solid rgba(245, 245, 247, 0.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245, 245, 247, 0.72);
+  background: #0b0b0c;
+  margin-top: 40px;
+}
+
+footer p {
+  background: transparent;
+  color: rgba(245, 245, 247, 0.72);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: transparent;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+  background-color: #1e2a14;
+  color: #92ad70;
+  text-align: left;
+  padding-left: 12px;
+  font-weight: 400;
+}
+
+td {
+  padding: 10px 12px;
+  background: transparent;
+  color: #f5f5f7;
+}
+
+tr:nth-child(even) td {
+  background-color: #161a10;
+}
+
+tr:nth-child(odd) td {
+  background-color: transparent;
+}
+
+form {
+  max-width: 480px;
+  margin: 0 auto;
+  background: transparent;
+}
+
+form * {
+  margin: auto;
+  text-align: center;
+  background: transparent;
+}
+
+form label {
+  display: block;
+  margin-bottom: 4px;
+  color: rgba(245, 245, 247, 0.8);
+  font-weight: 400;
+  text-align: left;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"] {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  margin: 4px auto 16px;
+  background: #1a1a1b;
+  color: #f5f5f7;
+  border: 1px solid rgba(245, 245, 247, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
+  text-align: left;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus {
+  outline: none;
+  border-color: #92ad70;
+}
+
+form input[type="submit"] {
+  display: inline-block;
+  background-color: #92ad70;
+  color: #0b0b0c;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 8px;
+  width: auto;
+}
+
+form input[type="submit"]:hover {
+  background-color: #a8c282;
+}
+
+@media (max-width: 600px) {
   #logo {
-    width: 18%;
+    width: 50%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta {
     display: block;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #f5f5f7;
-    font-weight: 400;
-    padding: 8px 10px;
-    border: 1px solid transparent;
-    border-radius: 12px;
-  }
-  
-  nav a:hover {
-    border-color: #4d5c3b;
-  }
-  
-  #navselected {
-    color: #92ad70;
-  }
-  
-  footer {
-    border-top: 1px solid rgba(245, 245, 247, 0.12);
-    padding: 18px 16px;
-    text-align: center;
-    color: rgba(245, 245, 247, 0.72);
-  }
-  
-  th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    width: fit-content;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f2f2f2;
-  }
-  
-  form * {
-    margin: auto;
     text-align: center;
   }
+
+  table {
+    font-size: 14px;
+  }
+}
