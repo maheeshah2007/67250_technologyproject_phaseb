@@ -9,9 +9,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
   <title>Exhibitions - MonoMuse</title>
 </head>
-<body>
+<body onload="addYear()">
   <header>
     <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
     <nav>
@@ -30,6 +31,7 @@
       to create new forms of digital expression. Through interactive displays and dynamic visuals, visitors can
       see how machines and human creativity work together to produce art that evolves in real time.
     </p>
+
     <h3>Exhibition 2: Code &amp; Canvas: The Language of Creative Technology</h3>
     <p>
       Code &amp; Canvas highlights the ways programming has become a medium for artistic creation. Featuring works
@@ -39,7 +41,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+    <p id="copyYear"></p>
   </footer>
 </body>
 </html>
