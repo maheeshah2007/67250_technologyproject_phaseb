@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse website redesign project">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="../static/script.js" defer></script>
+  <title>Explore - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h2>About MonoMuse</h2>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Mission</span>
+        <p>MonoMuse is dedicated to exploring the evolving relationship between art, technology, and society.
+        Our mission is to inspire curiosity and creativity by showcasing innovative exhibitions that highlight
+        how digital tools, emerging technologies, and human imagination shape the future of artistic expression.</p>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Who We Serve</span>
+        <p>MonoMuse welcomes visitors of all ages and backgrounds — from students and educators to artists,
+        technologists, and lifelong learners. We are committed to making contemporary art accessible and
+        meaningful for everyone.</p>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Opening Hours</span>
+        <p>Tuesday – Sunday, 10am – 6pm. Closed Mondays and public holidays.</p>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">About Us</span>
+        <p>Founded in 2016, MonoMuse has grown from a single-gallery space into a leading institution at the
+        intersection of art and digital innovation. We partner with artists, technologists, and universities
+        to bring bold new ideas to life.</p>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Milestones</span>
+        <ul>
+          <li>2023: Expansion of the museum space and launch of international artist collaborations.</li>
+          <li>2018: Launch of the Interactive Media Lab, allowing visitors to experiment with creative coding.</li>
+          <li>2016: MonoMuse opens its doors with its first exhibition on digital storytelling.</li>
+        </ul>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Visit Us</span>
+        <p>Find us in Pittsburgh, PA. Open Tuesday – Sunday, 10am – 6pm.</p>
+        <div id="map"></div>
+      </div>
+      <div class="explore-section">
+        <span class="section-label">Featured Video</span>
+        <p>Take a virtual tour of what contemporary art and technology look like today.</p>
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/gJPB3zOTpDU"
+            title="MonoMuse featured video"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

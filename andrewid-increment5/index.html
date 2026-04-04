@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse website redesign project">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-A/7/JMSzZHFPPDE9DkMlRNMDvlgbXFYMdMRPZaTaHZk=" crossorigin="anonymous"></script>
+  <script src="./static/script.js" defer></script>
+  <title>MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()">☰</button>
+      <a href="index.html">Home</a>
+      <a href="views/explore.html">Explore</a>
+      <a href="views/exhibitions.html">Exhibitions</a>
+      <a href="views/tickets.html">Tickets</a>
+      <a href="views/checkout.html">Checkout</a>
+      <a class="cta" href="views/buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="hero">
+        <span class="eyebrow">Contemporary Art + Technology</span>
+        <h2 id="greeting">Where human creativity meets digital innovation</h2>
+        <p id="shortIntro">
+          Immersive exhibitions, interactive installations, and rotating collections
+          exploring how technology transforms art and culture.
+        </p>
+        <p id="longIntro">
+          Whether you are a first-time visitor or a returning member, our exhibitions offer new
+          perspectives on the role of technology in culture and everyday life. Plan your visit to
+          experience cutting-edge exhibitions, hands-on experiences, and events designed to inspire
+          curiosity and creativity. Founded in 2016, MonoMuse has grown into a leading institution
+          at the intersection of art and digital innovation — partnering with artists, technologists,
+          and universities to bring bold new ideas to life.
+        </p>
+        <button class="read-toggle" id="readMore">Read More</button>
+        <button class="read-toggle" id="readLess">Read Less</button>
+        <br><br>
+        <a class="cta" href="views/buytickets.html">Explore Exhibitions</a>
+      </div>
+      <div class="ticket-bar">
+        <span class="ticket-bar-left">Tickets from $10 — book online and skip the queue</span>
+        <div class="ticket-bar-prices">
+          <div class="ticket-price-item">
+            <span class="price">$18</span>
+            <span class="label">Adult</span>
+          </div>
+          <div class="ticket-price-item">
+            <span class="price">$15</span>
+            <span class="label">Member</span>
+          </div>
+          <div class="ticket-price-item">
+            <span class="price">$10</span>
+            <span class="label">Student</span>
+          </div>
+          <div class="ticket-price-item">
+            <span class="price">Free</span>
+            <span class="label">Under 18</span>
+          </div>
+        </div>
+        <a class="ticket-bar-cta" href="views/buytickets.html">Purchase tickets →</a>
+      </div>
+      <h2 class="section-title">Featured exhibitions</h2>
+      <div class="exhibition-grid">
+        <div class="exhibition-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600" alt="Digital Dreams exhibition">
+          <div class="exhibition-card-body">
+            <h3>Digital Dreams: Art in the Age of Algorithms</h3>
+            <p>AI, generative tools, and human creativity producing art that evolves in real time.</p>
+            <a href="views/exhibitions.html">Learn more →</a>
+          </div>
+        </div>
+        <div class="exhibition-card">
+          <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=600" alt="Code and Canvas exhibition">
+          <div class="exhibition-card-body">
+            <h3>Code &amp; Canvas: The Language of Creative Technology</h3>
+            <p>How programming has become a medium for artistic creation.</p>
+            <a href="views/exhibitions.html">Learn more →</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

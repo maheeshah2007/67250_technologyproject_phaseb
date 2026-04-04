@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Your name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse website redesign project">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Tickets - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h2>Admission pricing</h2>
+        <p>All tickets include access to both current exhibitions. Children under 18 always enter free.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Adult</h3>
+          <span class="big-price">$18<span class="per">/ person</span></span>
+          <p>General admission for ages 18 and over. Under 18 free of charge.</p>
+        </div>
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most popular</span>
+          <h3>Student</h3>
+          <span class="big-price">$10<span class="per">/ person</span></span>
+          <p>Valid student ID required at entry.</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Member</h3>
+          <span class="big-price">$15<span class="per">/ person</span></span>
+          <p>Member ID required at entry.</p>
+        </div>
+      </div>
+      <div class="ticket-bar">
+        <div>
+          <p style="max-width:none; margin-bottom:4px; color:#f0ece4; font-weight:400;">Ready to book your visit?</p>
+          <p style="max-width:none; margin-bottom:0; font-size:13px; color:#888;">Select your ticket type and quantity on the next page</p>
+        </div>
+        <a class="ticket-bar-cta" href="buytickets.html">Purchase tickets →</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>
