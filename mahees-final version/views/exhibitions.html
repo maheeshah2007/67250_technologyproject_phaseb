@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="Current exhibitions at MonoMuse — Digital Dreams and Code and Canvas">
+  <!-- Google Fonts: DM Sans + Playfair Display — https://fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Exhibitions - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="membership.html">Membership</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h1>Current exhibitions</h1>
+        <p>Two exhibitions now open — both included with all ticket types.</p>
+      </div>
+
+      <div class="exhibition-row">
+        <!-- Image: Unsplash free license — https://unsplash.com/license -->
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400" alt="Digital Dreams exhibition showing AI-generated artwork with concentric circles">
+        <div class="exhibition-row-body">
+          <span class="on-now-badge">On now</span>
+          <h3>Exhibition 1: Digital Dreams — Art in the Age of Algorithms</h3>
+          <p>This exhibition explores how artists are using algorithms, artificial intelligence, and generative tools to create new forms of digital expression. Through interactive displays and dynamic visuals, visitors can see how machines and human creativity work together to produce art that evolves in real time.</p>
+          <a href="#">Learn more about Digital Dreams →</a>
+        </div>
+      </div>
+
+      <div class="exhibition-row">
+        <!-- Image: Unsplash free license — https://unsplash.com/license -->
+        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?w=400" alt="Code and Canvas exhibition showing a keyboard held by robotic hands as artistic medium">
+        <div class="exhibition-row-body">
+          <span class="on-now-badge">On now</span>
+          <h3>Exhibition 2: Code &amp; Canvas — The Language of Creative Technology</h3>
+          <p>Code &amp; Canvas highlights the ways programming has become a medium for artistic creation. Featuring works by digital artists and designers, the exhibition showcases installations, projections, and interactive pieces that reveal how lines of code can transform into immersive visual experiences.</p>
+          <a href="#">Learn more about Code and Canvas →</a>
+        </div>
+      </div>
+
+      <h2 class="section-title">Gallery</h2>
+      <!-- Slideshow initialized by initSlideshow() in script.js -->
+      <!-- Images saved in static/ folder as gallery1.jpg, gallery2.jpg, gallery3.jpg -->
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="../static/gallery1.jpg" alt="Museum gallery interior with colorful paintings displayed on walls under dramatic lighting">
+        </div>
+        <div class="slide">
+          <img src="../static/gallery2.jpg" alt="Art gallery space featuring large colorful abstract painting and bronze sculptures on pedestals">
+        </div>
+        <div class="slide">
+          <img src="../static/gallery3.jpg" alt="Contemporary gallery with black and white portrait artwork displayed in a grid arrangement">
+        </div>
+        <button class="slide-btn slide-prev" onclick="changeSlide(-1)" aria-label="Previous image">&#8592;</button>
+        <button class="slide-btn slide-next" onclick="changeSlide(1)" aria-label="Next image">&#8594;</button>
+      </div>
+      <div class="slide-dots" id="slideDots"></div>
+
+      <div class="ticket-bar">
+        <span class="ticket-bar-left">Ready to visit? Tickets from $10</span>
+        <div class="ticket-bar-prices">
+          <div class="ticket-price-item">
+            <span class="price">$18</span>
+            <span class="label">Adult</span>
+          </div>
+          <div class="ticket-price-item">
+            <span class="price">$10</span>
+            <span class="label">Student</span>
+          </div>
+          <div class="ticket-price-item">
+            <span class="price">Free</span>
+            <span class="label">Under 18</span>
+          </div>
+        </div>
+        <a class="ticket-bar-cta" href="buytickets.html">Purchase tickets →</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse membership and donation options — support the museum">
+  <!-- Google Fonts: DM Sans + Playfair Display — https://fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Membership - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="membership.html">Membership</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h1>Membership &amp; Donations</h1>
+        <p>Support MonoMuse and enjoy exclusive benefits all year round.</p>
+      </div>
+      <h2 class="section-title">Membership Plans</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Individual</h3>
+          <span class="big-price">$75<span class="per">/ year</span></span>
+          <p>Unlimited free admission for one adult. 10% off in the gift shop.</p>
+          <br>
+          <a class="cta" href="checkout.html">Join Now</a>
+        </div>
+        <div class="pricing-card popular">
+          <span class="popular-badge">Most popular</span>
+          <h3>Dual</h3>
+          <span class="big-price">$120<span class="per">/ year</span></span>
+          <p>Unlimited free admission for two adults. 10% off in the gift shop.</p>
+          <br>
+          <a class="cta" href="checkout.html">Join Now</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Family</h3>
+          <span class="big-price">$160<span class="per">/ year</span></span>
+          <p>Unlimited free admission for two adults and up to four children.</p>
+          <br>
+          <a class="cta" href="checkout.html">Join Now</a>
+        </div>
+      </div>
+      <h2 class="section-title">Make a Donation</h2>
+      <p>Your contribution helps us bring innovative exhibitions and education programs to our community.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Friend</h3>
+          <span class="big-price">$25</span>
+          <p>Supports our free community events and school programs.</p>
+          <br>
+          <a class="cta" href="checkout.html">Donate</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Supporter</h3>
+          <span class="big-price">$100</span>
+          <p>Helps fund our rotating exhibition program for the year.</p>
+          <br>
+          <a class="cta" href="checkout.html">Donate</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Patron</h3>
+          <span class="big-price">$500</span>
+          <p>Named recognition in our annual report and invitations to private events.</p>
+          <br>
+          <a class="cta" href="checkout.html">Donate</a>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

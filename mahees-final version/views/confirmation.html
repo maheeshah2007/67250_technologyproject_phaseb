@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse order confirmation page">
+  <!-- Google Fonts: DM Sans + Playfair Display — https://fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Order Confirmed - MonoMuse</title>
+</head>
+<!-- loadConfirmation() reads sessionStorage data saved by placeOrder() and displays it -->
+<body onload="addYear(); loadConfirmation();">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="membership.html">Membership</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="confirmation-box">
+        <div class="confirmation-icon" aria-label="Order confirmed checkmark">✓</div>
+        <h1>Order Confirmed!</h1>
+        <p>Thank you for your purchase. A confirmation has been sent to your email.</p>
+        <!-- Order details populated from sessionStorage by loadConfirmation() -->
+        <div class="confirmation-details">
+          <div class="summary-line">
+            <span>Ticket Type</span>
+            <span id="confType">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Quantity</span>
+            <span id="confQty">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Visit Date</span>
+            <span id="confDate">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Email</span>
+            <span id="confEmail">—</span>
+          </div>
+          <div class="summary-line summary-total">
+            <span>Total Charged</span>
+            <span id="confTotal">—</span>
+          </div>
+        </div>
+        <a class="cta" href="../index.html">Back to Home</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

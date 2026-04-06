@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse ticket checkout — select date, type, and quantity">
+  <!-- Google Fonts: DM Sans + Playfair Display — https://fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Checkout - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="membership.html">Membership</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h1>Checkout</h1>
+        <p>Complete your order below. All required fields must be filled in.</p>
+      </div>
+      <div class="checkout-layout">
+        <div class="checkout-form-section">
+          <!-- placeOrder() in script.js handles validation and redirect to confirmation.html -->
+          <form id="checkoutForm" novalidate>
+
+            <label for="visitDate">Visit Date (required)</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+            <span class="error-msg" id="visitDateError">Please select a visit date.</span>
+
+            <label for="ticketType">Ticket Type (required)</label>
+            <select id="ticketType" name="ticketType" required>
+              <option value="">Select a ticket type</option>
+              <option value="18">General — $18</option>
+              <option value="10">Student — $10</option>
+              <option value="15">Member — $15</option>
+            </select>
+            <span class="error-msg" id="ticketTypeError">Please select a ticket type.</span>
+
+            <label for="ticketQty">Quantity (1–10, required)</label>
+            <input type="number" id="ticketQty" name="ticketQty" min="1" max="10" value="1" required>
+            <span class="error-msg" id="ticketQtyError">Please enter a quantity between 1 and 10.</span>
+
+            <!-- Total updates in real time via updatePrice() in script.js -->
+            <div class="price-display">
+              Total: <span id="totalPrice">$0.00</span>
+            </div>
+
+            <label for="email">Email (required)</label>
+            <input type="email" id="email" name="email" placeholder="Confirmation will be sent here" required>
+            <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+
+            <label for="zipCode">Zip Code (optional — must be 5 digits if provided)</label>
+            <input type="text" id="zipCode" name="zipCode" placeholder="e.g. 15213" maxlength="5">
+            <span class="error-msg" id="zipCodeError">Zip code must be exactly 5 digits.</span>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="mailingList" name="mailingList">
+              <label for="mailingList" class="checkbox-label">Join our mailing list for updates and events</label>
+            </div>
+
+            <button type="button" class="cta" onclick="placeOrder()">Place Order</button>
+          </form>
+        </div>
+
+        <!-- Order summary sidebar — updates live via updatePrice() -->
+        <div class="checkout-summary">
+          <h3>Order Summary</h3>
+          <div class="summary-line">
+            <span>Ticket type</span>
+            <span id="summaryType">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Quantity</span>
+            <span id="summaryQty">—</span>
+          </div>
+          <div class="summary-line">
+            <span>Visit date</span>
+            <span id="summaryDate">—</span>
+          </div>
+          <div class="summary-line summary-total">
+            <span>Total</span>
+            <span id="summaryTotal">$0.00</span>
+          </div>
+          <p class="summary-note">Children under 18 always enter free. No ticket needed.</p>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>

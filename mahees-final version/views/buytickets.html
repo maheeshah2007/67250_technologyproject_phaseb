@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse buy tickets — select a date and purchase tickets online">
+  <!-- Google Fonts: DM Sans + Playfair Display — https://fonts.google.com -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <title>Buy Tickets - MonoMuse</title>
+</head>
+<body onload="addYear()">
+  <div class="container">
+    <header class="header">
+      <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+      <button class="hamburger" onclick="toggleNav()" aria-label="Open navigation menu">☰</button>
+      <a href="../index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="exhibitions.html">Exhibitions</a>
+      <a href="tickets.html">Tickets</a>
+      <a href="membership.html">Membership</a>
+      <a href="checkout.html">Checkout</a>
+      <a class="cta" href="buytickets.html">Buy Tickets</a>
+    </nav>
+    <main class="main">
+      <div class="page-banner">
+        <h1>Buy Tickets</h1>
+        <p>All tickets include access to both current exhibitions. Children under 18 always enter free.</p>
+      </div>
+
+      <h3 style="color:#f0ece4; font-family:'Playfair Display',serif; font-weight:400; margin-bottom:16px;">Ticket Prices</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Price</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Adult</td>
+            <td>$18</td>
+            <td>Ages 18 and over</td>
+          </tr>
+          <tr>
+            <td>Student</td>
+            <td>$10</td>
+            <td>Valid student ID required</td>
+          </tr>
+          <tr>
+            <td>Member</td>
+            <td>$15</td>
+            <td>Member ID required</td>
+          </tr>
+          <tr>
+            <td>Under 18</td>
+            <td>Free</td>
+            <td>No ticket needed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color:#f0ece4; font-family:'Playfair Display',serif; font-weight:400; margin:40px 0 8px;">April 2026 — Available Dates</h3>
+      <p>Select a date below to purchase tickets for that visit.</p>
+      <!-- Buy Now buttons call showPurchaseForm() in script.js -->
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Hours</th>
+            <th>Availability</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 5, 2026</td>
+            <td>Sunday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-05')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 8, 2026</td>
+            <td>Wednesday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-08')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 11, 2026</td>
+            <td>Saturday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-11')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 12, 2026</td>
+            <td>Sunday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-12')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 15, 2026</td>
+            <td>Wednesday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-15')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 18, 2026</td>
+            <td>Saturday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-18')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 19, 2026</td>
+            <td>Sunday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-19')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 22, 2026</td>
+            <td>Wednesday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-22')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 25, 2026</td>
+            <td>Saturday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-25')">Buy Now</button></td>
+          </tr>
+          <tr>
+            <td>April 26, 2026</td>
+            <td>Sunday</td>
+            <td>10am – 6pm</td>
+            <td>Available</td>
+            <td><button class="buy-now-btn" onclick="showPurchaseForm('2026-04-26')">Buy Now</button></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Purchase form hidden by default — revealed by showPurchaseForm() in script.js -->
+      <div id="purchaseForm">
+        <h3>Complete Your Purchase</h3>
+        <form>
+          <label for="buyName">Full Name (required)</label>
+          <input type="text" id="buyName" name="buyName" placeholder="e.g. Jane Smith" required>
+
+          <label for="buyEmail">Email Address (required)</label>
+          <input type="email" id="buyEmail" name="buyEmail" placeholder="Confirmation will be sent here" required>
+
+          <label for="buyQuantity">Number of Tickets (required)</label>
+          <input type="number" id="buyQuantity" name="buyQuantity" min="1" value="1" required>
+
+          <label for="selectedDate">Selected Date</label>
+          <input type="date" id="selectedDate" name="selectedDate">
+
+          <!-- submitTickets() in script.js triggers payment redirect alert -->
+          <input type="submit" value="Complete Purchase" onclick="submitTickets(); return false;">
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <p id="copyYear"></p>
+    </footer>
+  </div>
+</body>
+</html>
